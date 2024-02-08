@@ -35,7 +35,7 @@ const game = {
       "Martinez",
       "Alaba",
       "Davies",
-      "Kimnich",
+      "Kimmich",
       "Goretzka",
       "Coman",
       "Muller",
@@ -60,7 +60,7 @@ const game = {
   scored: ["Lewandowski", "Gnarby", "Lewandoski", "Hummels"],
   date: "Feb 7th, 2024",
   odds: {
-    teams1: 1.33,
+    team1: 1.33,
     x: 3.25,
     team2: 6.5,
   },
@@ -83,4 +83,16 @@ console.log(allPlayers);
 const players1Final = [...players1, "Thiago", "Coutinho", "Periscic"];
 
 // 5.
+const {
+  odds: { team1, x: draw, team2 },
+} = game;
+console.log(team1, draw, team2);
 
+// 6.
+const printGoals = function (...players) {
+  console.log(`${players.length} goals were scored`);
+};
+
+printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+printGoals("Davies", "Muller");
+printGoals(game.scored);
