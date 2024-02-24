@@ -174,9 +174,11 @@ average /= odds.length;
 console.log(average);
 
 //3.
-for (const [team, odd] of Object.entries(game.odds)) 
-  console.log(team, odd);
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
 
-  //Odd of victory Bayern Munich: 1.33
-  //Odd of draw: 3.25
-  //Odd of victory Borrussia Dortmund: 6.5
+//Odd of victory Bayern Munich: 1.33
+//Odd of draw: 3.25
+//Odd of victory Borrussia Dortmund: 6.5
