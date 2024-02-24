@@ -174,3 +174,5 @@ average /= odds.length;
 console.log(average);
 
 //3.
+for (const [team, odd] of Object.entries(game.odds)) 
+  console.log(team, odd);
